@@ -1,0 +1,8 @@
+2026-02-26 15:23:15,422 - INFO - Ingested begin_inventory.csv into DB table 'begin_inventory'
+2026-02-26 15:23:17,110 - INFO - Ingested end_inventory.csv into DB table 'end_inventory'
+2026-02-26 15:23:47,560 - INFO - Ingested purchases.csv into DB table 'purchases'
+2026-02-26 15:23:47,712 - INFO - Ingested purchase_prices.csv into DB table 'purchase_prices'
+2026-02-26 15:27:46,017 - INFO - Ingested sales.csv into DB table 'sales'
+2026-02-26 15:27:46,975 - INFO - Ingested vendor_invoice.csv into DB table 'vendor_invoice'
+2026-02-26 15:27:46,975 - INFO - ----------------Ingestion Complete-----------------
+2026-02-26 15:27:46,976 - INFO - Total time taken by ingestion: 4.55 minutes
