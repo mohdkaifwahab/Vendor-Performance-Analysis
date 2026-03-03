@@ -1,6 +1,5 @@
 streamlit
 pandas
 plotly
-matplotlib
+matplotlib==3.10.0
 numpy
-sqlite3
