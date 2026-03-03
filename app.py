@@ -1,7 +1,6 @@
 import streamlit as st
 import pandas as pd
 import plotly.express as px
-import sqlite3
 import numpy as np
 import matplotlib.pyplot as plt
 
@@ -19,14 +18,12 @@ st.title('📈 Vendor Sales Dashboard')
 # -------------------------
 @st.cache_data
 def load_data():
-    conn = sqlite3.connect('inventory.db')
-    df = pd.read_sql_query("""
-        SELECT * FROM vendor_sales_summary
-        WHERE GrossProfit > 0 
-        AND ProfitMargin > 0 
-        AND TotalSalesQuantity > 0
-    """, conn)
-    conn.close()
+    df = pd.read_csv('vendor_sales_summary.csv')
+    df = df[
+        (df['GrossProfit'] > 0) & 
+        (df['ProfitMargin'] > 0) & 
+        (df['TotalSalesQuantity'] > 0)
+    ]
     return df
 
 df = load_data()
